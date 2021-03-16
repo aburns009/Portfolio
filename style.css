@@ -8,6 +8,13 @@
   box-sizing: inherit;
 }
 
+/* add color vars later
+:root {
+  --prime: #1e90ff;
+  --second: #ffffff;
+}
+*/
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -35,11 +42,12 @@ body {
   display: flex;
   float: right;
   list-style: none;
-  transition: transform 0.3s ease-out;
 }
 
-.nav-links:hover {
-  transform: translateY(8px);
+.nav-links > li:hover {
+  transition: transform .4s ease-in-out;
+  transform: translateY(5px);
+  color: #59b6b9;
 }
 
 a {
@@ -48,7 +56,7 @@ a {
 
 a:link,
 a:visited {
-  color: white;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -63,12 +71,13 @@ a:visited {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   color: white;
+  margin: .5em 0em;
 }
 
 #welcome-tile {
-  width: 500px;
+  max-width: 500px;
   margin-left: 7em;
 }
 
@@ -78,6 +87,8 @@ h1 {
   max-width: 100%;
   display: block;
   height: auto;
+  box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.5);
+  
 }
 
 .decor {
@@ -96,4 +107,71 @@ h1 {
 
 .singled {
   color: #59b6b9;
+}
+
+/* Projects */
+
+
+.projects {
+ display: flex;
+  justify-content: space-around;
+  align-item: center;
+  margin: 15rem 10rem;
+}
+
+.game {
+  position: relative;
+  width: 12.5rem;
+}
+
+.name {
+  text-align: center;
+  margin: .5rem;
+}
+
+.back {
+  display: none;
+}
+
+.project-img {
+  max-width: 100%;
+  object-fit: cover;
+  width: 295px;
+  height: 300px;
+  border-radius: .8rem;
+}
+
+.streamers {
+  display: flex;
+  justify-content: center;
+}
+
+.fab {
+  margin: .8em;
+  transform: scale(1.8);
+}
+
+.background {
+  position: absolute;
+  background: red;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  transform: scale(.2, .9);
+  border-radius: .8rem;
+  opacity: 0;
+}
+
+.game:hover .front {
+  transition:  250ms;
+  transform: translateY(-30%) scale(.8);
+}
+
+.game:hover .background {
+  transition: 
+    transform 250ms ease-in-out;
+  transform: scale(1.4, 1.1);
+  opacity: 1;
 }
