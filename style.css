@@ -127,8 +127,7 @@ h2 {
 }
 
 .projects {
-  height: 80vh;
-  margin: 3em;
+  height: 60vh;
   color: #1e1a20;
 }
 
@@ -136,8 +135,8 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5em;
-  margin: 7em;
+  gap: 10em;
+  margin: 5em;
 }
 
 .game {
@@ -215,8 +214,9 @@ h2 {
 
 .contact-section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 50vh;
   background: #1e1a20;
 }
